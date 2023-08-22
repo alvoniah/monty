@@ -7,7 +7,6 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
-bus_t bus = {NULL, NULL, NULL, 0};
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -59,8 +58,8 @@ void f_mul(stack_t **hd, unsigned int count);
 void f_pall(stack_t **hd, unsigned int count);
 void f_queue(stack_t **hd, unsigned int count);
 void addqueue(stack_t **hd, int new);
-void f_rotl(stack_t **hd,  _attribute_((unused)) unsigned int count);
-void f_rotr(stack_t **hd, _attribute_((unused)) unsigned int count);
+void f_rotl(stack_t **hd,  __attribute__((unused)) unsigned int count);
+void f_rotr(stack_t **hd, __attribute__((unused)) unsigned int count);
 void f_pint(stack_t **hd, unsigned int count);
 void f_pop(stack_t **hd, unsigned int count);
 void f_push(stack_t **hd, unsigned int count);
