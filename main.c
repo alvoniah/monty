@@ -1,5 +1,6 @@
 #include "monty.h"
 #include <stdio.h>
+bus_t bus = {NULL, NULL, NULL, 0};
 /**
 * main - Func of monty code interpreter
 * @argc: no of args
@@ -8,12 +9,12 @@
 */
 int main(int argc, char *argv[])
 {
-	char *cont;
+	char *content;
 	FILE *file;
 	size_t size = 0;
 	ssize_t read_line = 1;
-	stack_t *stck = NULL;
-	unsigned int count = 0;
+	stack_t *stack = NULL;
+	unsigned int counter = 0;
 
 	if (argc != 2)
 	{
@@ -29,17 +30,17 @@ int main(int argc, char *argv[])
 	}
 	while (read_line > 0)
 	{
-		cont = NULL;
-		read_line = getline(&cont, &size, file);
-		bus.content = cont;
-		count++;
+		content = NULL;
+		read_line = getline(&content, &size, file);
+		bus.content = content;
+		counter++;
 		if (read_line > 0)
 		{
-			execute(cont, &stck, count, file);
+			execute(content, &stack, counter, file);
 		}
-		free(cont);
+		free(content);
 	}
-	free_stack(stck);
+	free_stack(stack);
 	fclose(file);
 return (0);
 }
