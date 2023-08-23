@@ -18,6 +18,6 @@ void f_pop(stack_t **hd, unsigned int count)
 		exit(EXIT_FAILURE);
 	}
 	h = *hd;
-	*head = h->next;
+	*hd = h->next;
 	free(h);
 }

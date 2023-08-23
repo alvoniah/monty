@@ -30,7 +30,7 @@ int execute(char *cont, stack_t **stck, unsigned int count, FILE *file)
 	unsigned int j = 0;
 	char *opp;
 
-	opp = strtok(content, " \n\t");
+	opp = strtok(cont, " \n\t");
 	if (opp && opp[0] == '#')
 		return (0);
 	bus.arg = strtok(NULL, " \n\t");

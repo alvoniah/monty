@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <stdio.h>
 /**
 * main - Func of monty code interpreter
 * @argc: no of args

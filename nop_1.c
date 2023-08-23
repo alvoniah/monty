@@ -7,6 +7,6 @@
  */
 void f_nop(stack_t **hd, unsigned int count)
 {
-	(void) counter;
-	(void) hd;
+	(void)count;
+	(void)hd;
 }

@@ -1,5 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -74,5 +75,5 @@ void f_mod(stack_t **hd, unsigned int count);
 void f_stack(stack_t **hd, unsigned int count);
 void f_sub(stack_t **hd, unsigned int count);
 void f_swap(stack_t **hd, unsigned int count);
-
+void free_stack(stack_t *hd);
 #endif

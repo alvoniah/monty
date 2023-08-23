@@ -23,12 +23,12 @@ void addqueue(stack_t **hd, int new)
 	stack_t *new_node, *aux;
 
 	aux = *hd;
-	new_node = malloc(sizeof(stack_t));
+	new_node = calloc(1, sizeof(stack_t));
 	if (new_node == NULL)
 	{
 		printf("Error\n");
 	}
-	new_node->new = new;
+	new_node->n = new;
 	new_node->next = NULL;
 	if (aux)
 	{
